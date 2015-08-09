@@ -1,7 +1,7 @@
 {
   "name": "express-res-links",
   "description": "express middleware for enhanced res.links",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Malte-Maurice Dreyer <dreyer.maltem+dev@gmail.com>",
   "bugs": {
     "url": "https://github.com/ileri/express-res-links/issues"
