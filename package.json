@@ -1,0 +1,39 @@
+{
+  "name": "express-res-links",
+  "description": "express middleware for enhanced res.links",
+  "version": "0.0.0",
+  "author": "Malte-Maurice Dreyer <dreyer.maltem+dev@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/ileri/express-res-links/issues"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-sourcemaps": "^1.5.2"
+  },
+  "homepage": "https://github.com/ileri/express-res-links",
+  "keywords": [
+    "express",
+    "headers",
+    "http",
+    "link",
+    "links"
+  ],
+  "license": "MIT",
+  "main": "dist/express-res-links.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ileri/express-res-links.git"
+  },
+  "scripts": {
+    "babel-node": "babel-node --stage 0",
+    "nodemon": "nodemon --exec npm run babel-node -- express-res-links.js",
+    "prepublish": "gulp build",
+    "start": "babel-node express-res-links.js",
+    "test": "standard {test/,lib/,./}*.js"
+  },
+  "dependencies": {
+    "http-header-link": "^0.1.0"
+  }
+}
