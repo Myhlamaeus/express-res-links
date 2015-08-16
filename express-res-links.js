@@ -6,6 +6,16 @@ export default function (req, res, next) {
       throw new Error('res.links expects linkObj to be an object')
     }
 
+    if (linkObj instanceof Promise) {
+      if (lang instanceof Promise) {
+        return Promise.all([linkObj, lang]).then(args => this.links(...args))
+      }
+      return linkObj.then(linkObj => this.links(linkObj, lang))
+    }
+    if (lang instanceof Promise) {
+      return lang.then(lang => this.links(linkObj, lang))
+    }
+
     let val = this.get('Link') || ''
     lang = lang || this.get('Content-Language') || linkObj.defaultLang
 
